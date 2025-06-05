@@ -1,13 +1,22 @@
 cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
 
 project(HL_MRF)
-find_package (PCL 1.11
-REQUIRED COMPONENTS)
+# find_package (PCL 1.11
+# REQUIRED COMPONENTS)
+
+set(PCL_DIR "/home/xiaochen/pcl-1.12.0/share/pcl-1.12")
+find_package(PCL 1.12 REQUIRED)
+
 include_directories (${PCL_INCLUDE_DIRS})
 link_directories (${PCL_LIBRARY_DIRS})
 add_definitions (${PCL_DEFINITIONS})
 
 find_package(Boost COMPONENTS graph filesystem)
+
+# set(BOOST_ROOT "/usr/local/boost_1_75")
+# set(BOOST_INCLUDEDIR "${BOOST_ROOT}/include")
+# set(BOOST_LIBRARYDIR "${BOOST_ROOT}/lib")
+# find_package(Boost 1.75.0 REQUIRED)
 
 FIND_PACKAGE( OpenMP REQUIRED)
 if(OPENMP_FOUND)

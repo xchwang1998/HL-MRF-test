@@ -234,7 +234,10 @@ int WHU::HL_MRF::sampleLeafsized( pcl::PointCloud<PointT>::Ptr& cloud_in,
 
 	size_t num_leaf = oct.getLeafCount();
 
-	pcl::octree::OctreePointCloud <PointT>::LeafNodeIterator it = oct.leaf_begin(), it_e = oct.leaf_end();
+	// pcl::octree::OctreePointCloud <PointT>::LeafNodeIterator it = oct.leaf_begin(), it_e = oct.leaf_end();
+	// for PCL 1.12 version
+	pcl::octree::OctreePointCloud <PointT>::LeafNodeIterator it = oct.leaf_depth_begin(), it_e = oct.leaf_depth_end();
+	
 	for (size_t i = 0; i < num_leaf; ++i, ++it)
 	{
 		pcl::IndicesPtr ids(new std::vector <int>); // extract octree leaf points

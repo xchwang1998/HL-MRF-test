@@ -36,6 +36,8 @@
 #ifndef TRANSFORMATION_GRAPH_H_
 #define TRANSFORMATION_GRAPH_H_
 
+#include <boost/shared_ptr.hpp> 
+
 /** \brief Comparator to sort a vectors of DirectedIndices according to the inner vectors length.
  * \param[in] first First directed indices
  * \param[in] second Second directed indices
