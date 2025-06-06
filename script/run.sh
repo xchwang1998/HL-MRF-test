@@ -1,6 +1,7 @@
 # TLS input path
-    path_dir=/home/wuhao/TLS/TLS_data/HeritageBuilding/ply;#input directory
-    out_dir=./result;#output directory
+    # path_dir=/home/wuhao/TLS/TLS_data/HeritageBuilding/ply;#input directory
+	path_dir=/media/xiaochen/xch_disk2/ETH_Trees;
+	out_dir=/home/xiaochen/workspace/HL-MRF-test/script/result;#output directory
 #parameters
 	block_size=3;# block size for hierarchical regisration (default: 5)
     downsample_size=0.1;# downsample size of input TLS scans for coarse registration (default: 0.1 m)

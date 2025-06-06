@@ -1414,7 +1414,7 @@ void WHU::HL_MRF::performMultiviewRegistration()
 	scans_left = files.size();
 	global_poses.resize(files.size());
 	scans_left_last = 0;
-
+	std::cout << "scans_left: " << scans_left << std::endl;
 	/*Loop 1:internal block registration.
 	* Loop 2:block-to-block registration.(default: only one "new block", higher level regisration code is not provided)
 	* Termination criteria: 1.scans_left == 1, all scans are merged.
