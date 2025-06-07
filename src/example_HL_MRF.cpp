@@ -15,7 +15,6 @@ int main(int argc,char*argv[])
 	int t_MCS = atoi(argv[7]);				   // threshold of MCS (default: 10)
 	int number_of_threads = atoi(argv[8]);	   // number of threads you use (default: 0)
 	bool visualize_each_block = atoi(argv[9]); // visualize each scan-block (default: 0)
-
 	WHU::HL_MRF mf;
 	mf.setBlockSize(block_size);
 	mf.setPlyPath(ss);
